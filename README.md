@@ -8,7 +8,7 @@ I wanted to write a cool little game in godot. I've never finished a project in 
 
 {Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the game being played and a walkthrough of the code.}
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/DmpcYTFUwEU)
 
 # Development Environment
 
