@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://btdsn4jglsbam"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_of3q2"]
+bg_color = Color(0.338605, 0.69653, 0.283936, 1)
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="ScorePanel" type="Panel" parent="."]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.0648148
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_of3q2")
+metadata/_edit_use_anchors_ = true
+
+[node name="ScoreLabel" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -43.0
+offset_right = 43.0
+offset_bottom = 42.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 26
+text = "Apples: 0"
+horizontal_alignment = 1
+vertical_alignment = 1

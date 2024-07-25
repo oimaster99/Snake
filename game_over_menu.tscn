@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4b70cft7d055"]
+
+[ext_resource type="Texture2D" uid="uid://6urntq7n41jf" path="res://gameover.jpg" id="1_plipe"]
+[ext_resource type="Script" path="res://game_over_menu.gd" id="1_sgd7m"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4jeka"]
+texture = ExtResource("1_plipe")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cbich"]
+bg_color = Color(0.744881, 0.30708, 0.256548, 1)
+
+[node name="GameOverMenu" type="CanvasLayer"]
+script = ExtResource("1_sgd7m")
+
+[node name="GameOverPanel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -185.0
+offset_right = 200.0
+offset_bottom = 185.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_4jeka")
+
+[node name="ResultLabel" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -158.0
+offset_top = -111.0
+offset_right = 172.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 55
+text = "GAME OVER!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ReplayButton" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -66.0
+offset_top = 18.0
+offset_right = 75.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_cbich")
+text = "Play Again"
+
+[connection signal="pressed" from="ReplayButton" to="." method="_on_replay_button_pressed"]
